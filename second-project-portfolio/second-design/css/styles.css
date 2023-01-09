@@ -1,0 +1,353 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --nav-height: 8vh;
+  --common-color: #ff8000;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* ********************** START Nav *************************** */
+.nav-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: white;
+  text-transform: uppercase;
+}
+.nav-bar .container {
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar ul {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-bar ul li {
+  display: inline-block;
+}
+.nav-bar ul a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.nav-bar ul a:hover {
+  border-bottom: 2px solid red;
+}
+/* ********************** END Nav bar *************************** */
+/* ********************** START landing image ******************* */
+.landing-image {
+  background-image: url("../images/landing-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.landing-image .landing-image-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+.landing-image .landing-image-content .container {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: #000; */
+  display: flex;
+  align-items: center;
+}
+.landing-image .landing-image-content h2 {
+  color: white;
+  text-transform: capitalize;
+  font-size: 7vh;
+  padding-left: 20vw;
+}
+.landing-image .landing-image-content .container .image-container {
+  padding-left: 100px;
+}
+.landing-image .landing-image-content .container .personal-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url("/images/personal.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*    about  */
+#about,
+#skills,
+#addworks,
+#contact {
+  margin-top: 30px;
+  transition: 0.5s;
+}
+#about #skills {
+  background-color: rgb(rgb(151, 151, 151), green, blue);
+}
+#about h2,
+#skills h2,
+#addworks h2,
+#contact h2 {
+  text-align: center;
+  font-size: 7vh;
+  margin: 50px auto;
+  text-transform: uppercase;
+  color: rgb(214, 213, 213);
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+#about .container,
+#skills .container,
+#addworks .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#about .container .about-content {
+  width: 50%;
+}
+#about .container .about-content h3 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-size: 4vh;
+  margin-left: 0;
+}
+#about .container .about-content ul {
+  margin-left: 30px;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+#about .container .about-content ul li {
+  padding-bottom: 5px;
+  color: rgb(40, 38, 38);
+}
+#about .container .about-image-container {
+  width: 45%;
+}
+
+#about .container .about-image-container img {
+  max-width: 100%;
+}
+/*.**********************************  start skills   **********************************.*/
+#skills .container .front-end-skills,
+#skills .container .back-end-skills {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#skills .container {
+  align-items: baseline;
+}
+#skills .container h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#skills .container .scale-container {
+  border: 2px solid black;
+  border-radius: 3px;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#skills .container .scale {
+  height: 24px;
+  width: 75%;
+  background-color: rgb(62, 62, 62);
+}
+#skills .container .html-scale {
+  width: 90%;
+}
+#skills .container .css-scale {
+  width: 95%;
+}
+#skills .container .bootstrap-scale {
+  width: 80%;
+}
+#skills .container .javascript-scale {
+  width: 80%;
+}
+#skills .container .react-scale {
+  width: 40%;
+}
+#skills .container .php-scale {
+  width: 50%;
+}
+#skills .container .nodejs-scale {
+  width: 60%;
+}
+#skills .container .mysql-scale {
+  width: 70%;
+}
+#skills .container .mongodb-scale {
+  width: 70%;
+}
+#skills .container .cms-scale {
+  width: 30%;
+}
+/*.**********************************  end skills   **********************************.*/
+
+/*.**********************************  start Addwork section   **********************************.*/
+#addworks {
+}
+#addworks .container {
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+}
+#addworks .container .image-container {
+  width: 30%;
+  min-width: 400px;
+  height: 200px;
+  background-image: url("/images/calender2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#addworks .container .image-container:hover {
+  box-shadow: 0px 0px 30px rgb(233, 156, 156);
+}
+#addworks .container .image-container p {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 25%;
+  width: 100%;
+  color: white;
+  bottom: 0;
+  padding: 5px;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  transition: 0.5s;
+}
+#addworks .container .image-container:hover p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+/*.**********************************  start contact section   **********************************.*/
+#contact .email-section {
+  max-width: 50vw;
+  height: 500px;
+  margin: 20px auto 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(55, 55, 55, 0.8);
+  position: relative;
+  border-radius: 5px;
+}
+#contact .email-section form {
+  padding: 10px;
+  padding-top: 10px;
+  max-width: 400px;
+  width: 50%;
+  min-width: 300px;
+
+ 
+}
+#contact .email-section .email-form-section {
+  margin-top: 10px;
+}
+#contact .email-section form label {
+  display: block;
+}
+#contact .email-section form input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+#contact .email-section form textarea {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  color: black;
+}
+#contact .email-section form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff8000;
+  color: white;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 5px;
+}
+#contact .email-section .social-links {
+  width: 50%;
+  height: 100%;
+  background-image: url("/images/job-search.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 100%;
+}
+#contact .email-section .social-links .social-links-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#contact .email-section .social-links  .social-links-overlay h4{
+  text-align: center;
+  padding-bottom:10px;
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.socal-links-content {
+  margin-top: 20px;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.socal-links-content p{
+  padding-left: 20px;
+}
+.footer {
+  width: 100%;
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ff8000;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
